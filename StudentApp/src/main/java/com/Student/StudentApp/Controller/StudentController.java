@@ -5,6 +5,8 @@ import com.Student.StudentApp.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 
 public class StudentController {
@@ -15,5 +17,10 @@ public class StudentController {
     @PostMapping("/save")
     public Student saveStudent(@RequestBody Student std){
         return service.saveStudent(std);
+    }
+
+    @GetMapping("/fetch")
+    public List<Student> fetchAll(){
+        return service.findAllStd();
     }
 }
