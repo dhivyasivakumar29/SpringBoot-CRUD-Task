@@ -34,5 +34,10 @@ public class FormController {
     public Form updateUser(@PathVariable long id,@RequestBody Form ex){
         return service.updateUser(id,ex);
     }
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> deleteUser(@PathVariable long id) {
+        return service.deleteUser(id);
+
+    }
 
 }

@@ -4,6 +4,7 @@ import java.util.List;
 import com.example.form.entity.Form;
 import com.example.form.repository.FormRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 
@@ -31,6 +32,17 @@ public class FormService {
             }
         }
         return repo.save(exist);
+    }
+
+        public ResponseEntity<String> deleteUser(Long id) {
+            Form exist=repo.findById(id).orElse(null);
+            if (exist==null) {
+                return ResponseEntity.status(404).body("User not found");
+            }
+
+            repo.delete(exist);
+            return ResponseEntity.ok("User Deleted Successful");
+
     }
 
 
