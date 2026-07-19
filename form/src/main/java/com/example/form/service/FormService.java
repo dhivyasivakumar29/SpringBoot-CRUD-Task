@@ -20,5 +20,18 @@ public class FormService {
         return repo.findAll();
     }
 
+    public Form updateUser(Long id,Form ex) {
+        Form exist=repo.findById(id).orElse(null);
+        if(exist!=null) {
+            if((ex.getName())!=null) {
+                exist.setName(ex.getName());
+            }
+            if((ex.getPass())!=null) {
+                exist.setPass(ex.getPass());
+            }
+        }
+        return repo.save(exist);
+    }
+
 
 }
