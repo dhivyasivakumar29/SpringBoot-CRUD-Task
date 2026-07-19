@@ -23,5 +23,8 @@ public class StudentService {
         repository.deleteById(stdId);
         return "Data deleted";
     }
+    public Student updatestd(int stdId,Student std){
+        return repository.save(std);
+    }
 }
 
