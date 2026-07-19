@@ -19,4 +19,9 @@ public class StudentService {
     public List<Student> findAllStd(){
         return repository.findAll();
     }
+    public String delete(Integer stdId){
+        repository.deleteById(stdId);
+        return "Data deleted";
+    }
 }
+

@@ -23,4 +23,9 @@ public class StudentController {
     public List<Student> fetchAll(){
         return service.findAllStd();
     }
+    @DeleteMapping("/delete/{stdId}")
+    public String deleteStd(@PathVariable Integer stdId){
+        service.delete(stdId);
+        return  "Student deleted";
+    }
 }
