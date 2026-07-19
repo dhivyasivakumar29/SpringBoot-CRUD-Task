@@ -30,10 +30,10 @@ public class FormController {
 
     }
 
-//    @GetMapping("/getUser")
-//    public List<Form> getUsers() {
-//        return service.getUser();
-//    }
+    @GetMapping("/getUser")
+    public List<Form> getUsers() {
+        return service.getUser();
+    }
 
 
 }
