@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/form")
-@CrossOrigin(origins="http://localhost:5173")
 public class FormController {
 
     @Autowired
