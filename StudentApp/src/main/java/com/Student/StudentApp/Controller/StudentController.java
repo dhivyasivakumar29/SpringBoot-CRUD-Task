@@ -30,7 +30,7 @@ public class StudentController {
         return  "Student data deleted";
     }
 
-    @PutMapping("/update/{stdId}")
+    @PutMapping("/updateById/{stdId}")
     public Student UpdateStd(@PathVariable int stdId, @RequestBody Student std){
         return service.updatestd(stdId,std);
     }
