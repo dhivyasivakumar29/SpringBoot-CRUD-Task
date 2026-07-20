@@ -26,7 +26,7 @@ public class StudentController {
     @DeleteMapping("/delete/{stdId}")
     public String deleteStd(@PathVariable Integer stdId){
         service.delete(stdId);
-        return  "Student deleted";
+        return  "Student data deleted";
     }
 
     @PutMapping("/update/{stdId}")
