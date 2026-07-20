@@ -32,13 +32,13 @@ public class productcontroller {
 //          System.out.println(prod);
 //           service.addproduct(prod);
 //}
-@PutMapping("/product")
-public void updateproduct(@RequestBody product prod){
-          service.updateproduct(prod);
-}
-//@DeleteMapping("/product/{proid}")
-//public void deleteproduct(@PathVariable int proid ){
-//          service.deleteproduct(proid);
+//@PutMapping("/product")
+//public void updateproduct(@RequestBody product prod){
+//          service.updateproduct(prod);
 //}
+@DeleteMapping("/product/{proid}")
+public void deleteproduct(@PathVariable int proid ){
+          service.deleteproduct(proid);
+}
 //
 //}
