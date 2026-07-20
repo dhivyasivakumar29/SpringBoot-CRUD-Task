@@ -27,15 +27,15 @@ public class productcontroller {
 //     public product getproductbyname(@PathVariable String proname){
 //          return service.getproductbyname(proname);
 //     }
-     @PostMapping("/product")
-public void addproduct(@RequestBody product prod){
-          System.out.println(prod);
-           service.addproduct(prod);
-}
-//@PutMapping("/product")
-//public void updateproduct(@RequestBody product prod){
-//          service.updateproduct(prod);
+//     @PostMapping("/product")
+//public void addproduct(@RequestBody product prod){
+//          System.out.println(prod);
+//           service.addproduct(prod);
 //}
+@PutMapping("/product")
+public void updateproduct(@RequestBody product prod){
+          service.updateproduct(prod);
+}
 //@DeleteMapping("/product/{proid}")
 //public void deleteproduct(@PathVariable int proid ){
 //          service.deleteproduct(proid);
