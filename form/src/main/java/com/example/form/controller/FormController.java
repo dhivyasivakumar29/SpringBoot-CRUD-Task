@@ -19,7 +19,7 @@ public class FormController {
     @PostMapping("/createUser")
     public String addUser(@RequestBody Form obj) {
         service.createUser(obj);
-        return "User Created Successfully";
+        return "User Created Successful";
 
 
     }
