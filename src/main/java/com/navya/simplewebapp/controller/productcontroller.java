@@ -8,17 +8,21 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-public class productcontroller{
+public class productcontroller {
      @Autowired
      productservice service;
+
      @RequestMapping("/product")
-     public List<product> getproducts(){
+     public List<product> getproducts() {
+
           return service.getProducts();
      }
+
      @GetMapping("/product/{proid}")
-     public product getproductbyid(@PathVariable int proid){
+     public product getproductbyid(@PathVariable int proid) {
           return service.getproductbyid(proid);
      }
+}
 //     @RequestMapping("/product/{proname}")
 //     public product getproductbyname(@PathVariable String proname){
 //          return service.getproductbyname(proname);
