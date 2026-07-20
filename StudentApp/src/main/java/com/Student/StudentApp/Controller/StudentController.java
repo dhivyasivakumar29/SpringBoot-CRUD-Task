@@ -20,7 +20,7 @@ public class StudentController {
         return service.saveStudent(std);
     }
 
-    @GetMapping("/fetchAllStd")
+    @GetMapping("/fetch")
     public List<Student> fetchAll(){
         return service.findAllStd();
     }
